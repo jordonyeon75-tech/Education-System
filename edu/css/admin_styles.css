@@ -1,0 +1,212 @@
+/*Admin from and table styles*/
+.ContentsCon {
+    margin-top: 50px !important;
+}
+
+.ContentsCon h3{
+    font-size: 20px;
+}
+.AdminForm {
+    width: 100% !important;
+    margin: 20px auto  !important; /* Center the form */
+    padding: 20px  !important;
+    border: 1px solid #ccc !important;
+    border-radius: 10px !important;
+    background-color: #f9f9f9 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+}
+
+.AdminForm input,
+.AdminForm textarea,
+.AdminForm select {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 8px !important;
+    padding: 10px !important;
+    box-sizing: border-box !important;
+    font-size: 16px !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.AdminForm input:focus,
+.AdminForm textarea:focus,
+.AdminForm select:focus {
+    border-color: #4caf50 !important; /* Modern green color */
+    outline: none !important;
+}
+
+.AdminForm input[type="file"] {
+    padding: 5px 10px !important;
+    background-color: #fff !important;
+    cursor: pointer !important;
+}
+
+.AdminForm textarea {
+    resize: vertical !important; /* Allow resizing only vertically */
+}
+
+.AdminFormBtn {
+    padding: 12px 25px !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: white !important;
+    background-color: #4caf50 !important; /* Modern green color */
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 20px;
+}
+
+.AdminFormBtn:hover {
+    background-color: #45a049 !important; /* Slightly darker shade for hover */
+    margin-left: 10px !important;
+}
+
+@media (max-width: 768px) {
+    .AdminForm {
+        padding: 15px !important;
+        box-shadow: none !important; /* Remove shadow on smaller screens */
+        border-radius: 5px !important;
+    }
+}
+.AdminSearch {
+    padding-left: 30px !important; /* Adjust to make space for the icon */
+    background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 8px center !important;
+    background-size: 16px 16px !important; /* Adjust the size of the icon */
+    outline: none !important;
+    border-radius: 10px !important;
+    height: 50px !important;
+    background-color: #fff !important;
+    border-color: #ddd !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+}
+
+/* General styles for the div */
+.AdminTablePhone {
+    width: 100%;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    margin-bottom: 20px;
+}
+
+table.datatable {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 20px !important;
+    font-size: 13px;
+}
+.datatable .theadstick th {
+    position: sticky !important;
+    top: 0 !important; /* Stick to the top */
+    z-index: 2 !important; /* Ensure it appears above other content */
+}
+
+table.datatable th,
+table.datatable td {
+    padding: 10px !important;
+    border: 1px solid transparent !important;
+    border-bottom: 1px solid #ddd !important;
+    text-align: left !important;
+}
+table.datatable thead tr {
+    padding: 20px !important;
+    background-color: #fff !important;
+    border-radius: 20px !important;
+    color: #909090 !important;
+}
+/*thead*/
+.datatable th:first-child {
+    border-radius: 10px 0 0 10px !important; /* Top-left corner */
+}
+.datatable th:last-child {
+    border-radius: 0 10px 10px 0 !important;  /* Top-right corner */
+    width: 20% !important;
+}
+table.datatable tbody tr{
+    background-color: #fff !important;
+}
+/*tbody*/
+/* First row of the tbody */
+.datatable tbody tr:first-child td:first-child {
+    border-radius:10px 0 0 0 !important; /* Top-left corner */
+}
+
+.datatable tbody tr:first-child td:last-child {
+    border-radius: 0 10px 0 0 !important; /* Top-right corner */
+}
+
+/* Last row of the tbody */
+.datatable tbody tr:last-child td:first-child {
+    border-radius: 0 0 0 10px !important; /* Bottom-left corner */
+}
+
+.datatable tbody tr:last-child td:last-child {
+    border-radius: 0 0 10px 0 !important; /* Bottom-right corner */
+}
+.datatable tbody tr:last-child td {
+    border-bottom-color: transparent !important;
+}
+table.datatable tbody tr:hover {
+    background-color: #888888 !important;
+}
+
+table.datatable button {
+    padding: 5px 10px !important;
+    border-radius: 11px !important;
+    width: 100px !important;
+    border: 1px solid !important ;
+}
+
+table.datatable button:nth-child(1) {
+    background-color: #EAFFD8 !important;
+    color: #71BA30 !important;
+}
+
+table.datatable button:nth-child(2) {
+    background-color: #FFE6E1 !important;
+    color: #F35437 !important;
+}
+/* Responsive styles */
+
+
+/* Responsive styles for phone screens */
+@media (max-width: 1024px) {
+    .AdminTablePhone {
+        overflow-x: auto;
+        border: 1px solid #ddd;
+        width: 600px;
+    }
+
+    .AdminTablePhone table {
+        min-width: 1000px;
+    }
+
+
+}
+@media (max-width: 600px) {
+    .AdminTablePhone {
+        overflow-x: auto;
+        border: 1px solid #ddd;
+        width: 330px;
+    }
+
+    .AdminTablePhone table {
+        min-width: 1000px;
+    }
+
+
+}
+
+.AdminTableBolowBtn{
+    text-align: center;
+}
+.AdminTableBolowBtn button {
+    background-color: #4caf50;
+    border-color: #4caf50;
+    transition: all 0.2s ease;
+}
+
+.AdminTableBolowBtn button:hover {
+    transform: translateY(-5px);
+}

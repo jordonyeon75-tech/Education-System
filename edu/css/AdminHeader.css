@@ -1,0 +1,204 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+/* Top Header */
+.AdminTopHeader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.TopHeaderCon {
+    background: #ffffff;
+    padding: 10px 20px;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AdminTopLeft, .AdminTopRight {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.PhoneBurger {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.Logo img {
+    margin-top: 20px;
+    width: 110px;
+}
+
+.AdminProfile img, .AdminOut img {
+    transition: transform 0.7s ease;
+    cursor: pointer;
+    width: 40px;
+}
+
+.AdminOut img {
+    width: 30px;
+}
+
+.AdminProfile img:hover, .AdminOut img:hover {
+    transform: scale(1.2);
+}
+.AdminDivider{
+    height: 30px;
+    border: 1px solid;
+}
+
+/* Left Sidebar */
+.AdminLeftHeader {
+    background: #9e87bf;
+    height: 100%;
+    width: 25vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 80px;
+    padding: 20px 0px;
+    transition: transform 0.5s ease;
+    z-index: 3;
+}
+.AdminLeftHeader a{
+    text-decoration: none;
+    color: white;
+}
+
+.AdminLeftHeader.hidden {
+    transform: translateX(-100%); /* Hide sidebar */
+}
+
+.LeftHeaderItems {
+    padding: 10px 10px 10px 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.15em;
+    position: relative;
+}
+
+.LeftHeaderItems.active,
+.LeftHeaderItems:hover {
+    background: #7c60a4;
+}
+
+.LeftHeaderItems.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1;
+}
+.LeftHeaderCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+}
+.btnlog{
+    background-color: #faac14;
+}
+.btnlog:hover{
+    background-color: #f35437;
+}
+/* Main Content */
+.AdminContents {
+    margin-left: 25vh;
+    margin-top: 50px !important;
+    padding: 10px 50px;
+    flex: 1;
+    transition: margin-left 0.5s ease;
+}
+
+.AdminContents.full-width {
+    margin-left: 0; /* Content takes full width */
+}
+
+.ContentsCon{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.ContentsCon h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.stat-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    position: relative;
+}
+
+.stat-circle small {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #fff;
+}
+
+/* Color Themes */
+.orange { background-color: #f39c12; }
+.green { background-color: #2ecc71; }
+.red { background-color: #e74c3c; }
+.blue { background-color: #3498db; }
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .PhoneBurger {
+        display: block !important; /* Show burger icon */
+    }
+
+    .AdminLeftHeader {
+        transform: translateX(-100%)!important; /* Initially hidden */
+    }
+
+    .AdminLeftHeader.hidden {
+        transform: translateX(0)!important; /* Show sidebar */
+    }
+
+    .AdminContents {
+        margin-left: 0!important; /* Full-width content */
+    }
+    .AdminContents {
+        padding: 10px!important;
+    }
+    .stats {
+        flex-direction: column;
+        justify-content: center;
+    }
+}

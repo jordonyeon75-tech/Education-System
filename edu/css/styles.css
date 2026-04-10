@@ -1,0 +1,165 @@
+/*-------------------Timetable--------------------------*/
+.date-text {
+    font-size: 0.7em; /* Make the text smaller */
+    color: grey; /* Change the color to grey */
+}
+
+.classroom-table {
+    width: 100%; /* Spread the columns evenly */
+    min-height: 120px; /* Minimum height for the table */
+    border-collapse: separate;
+    border-spacing: 0; /* Remove default spacing */
+    border-radius: 10px; /* Round corners */
+    background-color: #FAAC14; /* Yellow background */
+    color: white; /* White font color */
+    margin-top: 20px;
+    overflow: hidden; /* Apply round corners */
+}
+
+.classroom-table thead {
+    font-weight: bold;
+}
+
+.classroom-table th, .classroom-table td {
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle; /* Align text to the top */
+}
+
+.classroom-table tbody tr:nth-child(even) {
+    background-color: white; /* White background for content rows */
+    color: black; /* Black font color for content */
+}
+
+.classroom-table tbody tr:nth-child(odd) {
+    background-color: #FAAC14; /* Retain yellow for odd rows */
+    color: white; /* White font color for odd rows */
+}
+
+.classroom-table tbody tr td:nth-child(3) {
+    width: 50%; /* Subject column gets more space */
+}
+
+/* Apply styles specifically to tbody rows */
+.classroom-table tbody tr {
+    background-color: white !important; /* Override any yellow background */
+    color: #808080 !important; /* Ensure grey font */
+    border: none; /* Remove borders */
+}
+
+/* Add padding for better spacing */
+.classroom-table tbody tr td {
+    padding: 10px;
+}
+
+/* Add hover effect for better interactivity */
+.classroom-table tbody tr:hover {
+    background-color: #f9f9f9; /* Light grey on hover */
+}
+
+
+/* Dashboard */
+.image-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    cursor: pointer;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-modal:hover .modal-content {
+    filter: brightness(1.1); /* Brighten the image slightly on hover */
+}
+
+.dashboard-container {
+    margin: 20px auto;
+    max-width: 100%;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.dashboard-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.notices-container {
+    margin: 30px 0  ;
+}
+
+.notices-list {
+    list-style: none;
+    padding-bottom: 3px;
+}
+
+.notice-card {
+    background-color: #f9f9f9;
+    margin: 30px 0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.notice-card img{
+    cursor: pointer;
+}
+.notice-title {
+    font-size: 1.2em;
+    color: #FAAC14;
+    margin-bottom: 5px;
+}
+
+.notice-message {
+    margin: 10px 0;
+    color: #555;
+}
+
+.notice-image {
+    max-width: 300px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.no-image {
+    color: #999;
+    font-style: italic;
+}
+
+.notice-date {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 10px;
+}
+
+.no-notices {
+    text-align: center;
+    color: #777;
+    font-size: 1.1em;
+}
+
+
+

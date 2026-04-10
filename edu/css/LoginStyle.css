@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://site.broncos.com.my/BKB-ar24/wp-content/uploads/2024/12/loginbg.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+/* Styling for the loginimg div */
+.loginimg {
+    background: rgba(0, 0, 0, 0.2);  /* Darker transparent background */
+    position: relative; /* Required for pseudo-element positioning */
+    width: 400px;
+    height: 450px;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent content or pseudo-element from overflowing */
+}
+
+.loginimg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://site.broncos.com.my/BKB-ar24/wp-content/uploads/2024/12/sideimglogin.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+}
+
+.loginimg p{
+    font-size: 20px;
+    color:#fff;
+}
+
+
+.login-container {
+    background: rgba(0, 0, 0, 0.4);  /* Darker transparent background */
+    backdrop-filter: blur(15px);  /* Stronger blur effect */
+    padding: 40px 50px;
+    border-radius:0  25px 25px  0;
+    width: 400px;
+    height: 450px;  /* Same height as the viewport */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.login-container:hover {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+    position: relative;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    background-color: #f0f0f0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-color: #6c5ce7;
+    background-color: #e0e0e0;
+}
+
+.input-group input::placeholder {
+    color: #b8b8b8;
+}
+
+.remember {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.remember a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.remember a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    color: white;
+    background-color: #6c5ce7;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: #5a4ecf;
+    transform: translateY(-2px);  /* Button hover effect */
+}
+
+.register-link {
+    margin-top: 20px;
+}
+
+.register-link a {
+    font-size: 14px;
+    color: #6c5ce7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+    color: #4c3fda;
+    text-decoration: underline;
+}
+
+/* Icon inside the input fields */
+.input-group .fa-user,
+.input-group .fa-lock {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(10%);
+    font-size: 18px;
+    color: #6c5ce7;
+}
+
+.input-group input {
+    padding-left: 40px;  /* Space for icon */
+}
+
+/* Show password feature */
+.show-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(10%);
+    font-size: 18px;
+    color: #6c5ce7;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.show-password:hover {
+    color: #4c3fda;
+}
+
+/* Add animation to the container */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.login-container{
+    animation: slideIn 0.8s ease-out;
+}
+@media (max-width: 768px) {
+    .background {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .loginimg {
+        border-radius: 25px 25px 0 0;
+        width: 90%;
+        height: 200px;
+    }
+
+    .login-container {
+        border-radius: 0 0 25px 25px;
+        width: 90%;
+    }
+}
+

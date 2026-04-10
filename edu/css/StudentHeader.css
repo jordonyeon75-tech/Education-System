@@ -1,0 +1,185 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #f1f1f1;
+}
+
+/* Top Header */
+.StudentTopHeader {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+    transition: transform 01s ease;
+    display: none;
+}
+
+.StudentTopHeader.hide {
+    transform: translateX(130%);
+}
+
+.StudentTopHeader.show {
+    transform: translateX(0);
+}
+
+.TopHeaderCon {
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.PhoneBurger {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Left Sidebar */
+.StudentLeftHeader {
+    background: #fff;
+    height: 100%;
+    width: 25vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 0px;
+    padding: 20px 0px;
+    transition: transform 0.5s ease;
+    z-index: 3;
+    border-right: 2px solid #a1a1a1;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Adds shadow to the right */
+}
+
+.StudentLeftHeader .Studentbtnmain {
+    text-decoration: none;
+    color: #6d6d6d;
+}
+
+.StudentLeftHeader.hidden {
+    transform: translateX(-100%); /* Hide sidebar */
+}
+
+.Logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Logo img {
+    width: 110px;
+}
+
+.LeftHeaderItems {
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.3em;
+    position: relative;
+    text-align: center;
+}
+
+.LeftHeaderItems img {
+    width: 6vh;
+    transition: transform 0.3s ease;
+}
+.Studentbtnmain:hover{
+    color:#ffac14;
+}
+.Studentbtnmain:hover img {
+    transform: scale(1.3) !important; /* Scale image to 1.1 */
+}
+.LeftHeaderItems.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background-color: #ffac14;
+    z-index: 1;
+}
+.LeftHeaderCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 85vh;
+}
+.LogoutCon a{
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.btn-log{
+    background-color: #faac14 !important;
+}
+.btn-log:hover{
+    background-color: #f35437!important;
+}
+/* Main Content */
+.StudentContents {
+    margin-left: 25vh;
+    margin-top: 0px;
+    padding: 10px 50px;
+    flex: 1;
+    transition: margin-left 0.5s ease;
+}
+
+.StudentContents.full-width {
+    margin-left: 0; /* Content takes full width */
+}
+
+.ContentsCon {
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.ContentsCon h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.test {
+    width: 100%;
+    height: 40vh;
+    border: 1px solid;
+    margin-bottom: 3vh;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .StudentTopHeader{
+        display: block !important; /* Show burger icon */
+    }
+
+    .StudentLeftHeader {
+        transform: translateX(-100%) !important; /* Initially hidden */
+        margin-top: 0px;
+    }
+
+    .StudentLeftHeader.hidden {
+        transform: translateX(0) !important; /* Show sidebar */
+    }
+
+    .StudentContents {
+        margin-left: 0 !important; /* Full-width content */
+    }
+
+    .StudentContents {
+        padding: 10px !important;
+    }
+
+    .StudentContents {
+        margin-top: 50px;
+    }
+}
